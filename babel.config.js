@@ -1,21 +1,3 @@
-module.exports = (api) => {
-  return {
-    // plugins: [
-    //   "@babel/plugin-proposal-nullish-coalescing-operator",
-    //   "@babel/plugin-proposal-optional-chaining",
-    // ],
-    presets: [
-      [
-        // "@babel/preset-typescript",
-        "@babel/preset-env",
-        {
-          useBuiltIns: "entry",
-          targets: api.caller((caller) => caller && caller.target === "node")
-            ? { node: "current" }
-            : { chrome: "58", ie: "11" },
-        },
-        "@babel/preset-typescript",
-      ],
-    ],
-  };
-};
+module.exports = {
+    presets: [ "@babel/preset-env","@babel/preset-typescript"  ]
+}

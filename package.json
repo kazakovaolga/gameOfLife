@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --coverage \"./src/*\"",
     "lint": "prettier --check \"./src/**/*\" && eslint \"./src/**/*\" && stylelint \"./src/**/*.scss\" && tsc --noEmit",
-    "lint:fix": "prettier --write \"./src/**/*\" && eslint  \"./src/**/*\" --fix && stylelint \"./src/**/*.scss\" --fix",
+    "lint:fix": "prettier --write \"./src/**/*\" && eslint  \"./src/**/*\" --fix && stylelint \"./src/**/*.scss\" --fix && tsc --noEmit",
     "prepare": "husky install",
     "build": "webpack --node-env production",
     "dev": "webpack serve --node-env development"
