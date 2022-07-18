@@ -1,8 +1,3 @@
-/**
- * Число живых соседей
- * @param {number[][]} field  - игровое поле
- * @returns {number}
- */
 export function getAllCellsAliveCount(field: number[][]): number {
   let count = 0;
   const cells: number[][] = field;

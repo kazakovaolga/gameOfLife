@@ -1,8 +1,6 @@
 import { getCellAliveNeighborCount } from "./getCellAliveNeighborCount";
 
 describe("getCellAliveNeighborCount", () => {
-  // getCellAliveNeighborCount(field, x, y) -> number
-
   let field: number[][];
   beforeEach(() => {
     field = [

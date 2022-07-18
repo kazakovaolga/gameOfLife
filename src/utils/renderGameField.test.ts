@@ -2,7 +2,7 @@
 import { renderGameField } from "./renderGameField";
 
 describe("renderGameField", () => {
-  const container = document.createElement("div") as HTMLElement;
+  const container = document.createElement("div") as HTMLDivElement;
   const onClick = jest.fn();
 
   it("is a function", () => {
@@ -66,17 +66,17 @@ describe("renderGameField", () => {
       ],
       onClick,
     });
-    const cellDead = container.querySelector(".cell.dead") as HTMLElement;
+    const cellDead = container.querySelector(".cell.dead") as HTMLDivElement;
     cellDead.click();
     expect(onClick).toHaveBeenCalledWith(0, 0);
 
-    const cellAlive = container.querySelector(".cell.alive") as HTMLElement;
+    const cellAlive = container.querySelector(".cell.alive") as HTMLDivElement;
     cellAlive.click();
     expect(onClick).toHaveBeenCalledWith(2, 0);
 
     const cellCoord = container.querySelector(
       ".cell[data-x='2'][data-y='2']"
-    ) as HTMLElement;
+    ) as HTMLDivElement;
     cellCoord.click();
     expect(onClick).toHaveBeenCalledWith(2, 2);
   });

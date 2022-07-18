@@ -1,5 +1,5 @@
-export interface Obj {
-  el: HTMLElement;
+export interface GameField {
+  el: HTMLDivElement;
   field: number[][];
   onClick: (x: number, y: number) => void;
 }

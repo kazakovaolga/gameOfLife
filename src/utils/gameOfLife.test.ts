@@ -5,8 +5,8 @@ import { Coord } from "./types";
 const setTime = jest.spyOn(global, "setTimeout");
 
 describe("gameOfLife", () => {
-  let app: HTMLElement;
-  let el: HTMLElement;
+  let app: HTMLDivElement;
+  let el: HTMLDivElement;
   let btnStop: HTMLButtonElement;
   let btnChange: HTMLButtonElement;
   let btnStart: HTMLButtonElement;
@@ -201,14 +201,14 @@ describe("gameOfLife", () => {
   });
 });
 
-function clickCell(el: HTMLElement, coordinates: Coord) {
+function clickCell(el: HTMLDivElement, coordinates: Coord) {
   const cell = el.querySelector(
     `[data-x="${coordinates.x}"][data-y="${coordinates.y}"]`
-  ) as HTMLElement;
+  ) as HTMLDivElement;
   cell.click();
 }
 
-function getFieldFromElement(el: HTMLElement) {
+function getFieldFromElement(el: HTMLDivElement) {
   const cells: number[][] = [];
   el.querySelectorAll(".cell").forEach((el) => {
     const x = Number(el.getAttribute("data-x"));

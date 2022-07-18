@@ -1,10 +1,3 @@
-/**
- * Число живых соседей
- * @param {number[][]} field  - игровое поле
- * @param {number} x  - колонка
- * @param {number} y  - строка
- * @returns {number}
- */
 export function getCellAliveNeighborCount(
   field: number[][],
   x: number,
